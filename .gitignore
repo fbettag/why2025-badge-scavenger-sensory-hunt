@@ -1,0 +1,139 @@
+# ESP-IDF Build artifacts
+build/
+sdkconfig
+sdkconfig.old
+*.bin
+*.elf
+*.map
+.esp-idf-*.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+*.egg-info/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# Data files
+data/raw_logs/*.csv
+data/labeled/*.csv
+data/model/*.tflite
+data/model/*.h5
+data/model/*.pb
+*.log
+voc_data_*.csv
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.cproject
+.settings/
+*.sublime-*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+
+# Documentation builds
+docs/_build/
+docs/.doctrees/
+*.pdf
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.cache
+
+# Serial port locks
+.lock-*
+
+# Core dumps
+core
+*.core
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Model files (keep placeholders)
+!data/model/.gitkeep
+!data/raw_logs/.gitkeep
+!data/labeled/.gitkeep
+
+# Security - never commit these
+*.pem
+*.key
+*.cert
+*.crt
+secrets.h
+wifi_config.h
+
+# ESP32 partition tables (generated)
+partition_table/*.bin
+
+# Component locks
+components/*/component_hash
+
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Managed components
+managed_components/
+
+# Unit test artifacts
+test/unit_test/build/
+test/unit_test/sdkconfig*
+
+# Performance logs
+*.prof
+
+# ML training artifacts
+checkpoints/
+tensorboard_logs/
+*.ckpt
+wandb/
+
+# Badge-specific
+/sdcard/
+flash_download_tool*/

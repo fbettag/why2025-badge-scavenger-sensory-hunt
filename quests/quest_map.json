@@ -1,0 +1,123 @@
+{
+  "version": "1.0",
+  "quests": [
+    {
+      "id": 1,
+      "name": "Rain Dancer",
+      "description": "Find a rainy spot and dance in the rain! The badge will detect high humidity levels.",
+      "type": "sensor",
+      "trigger": "humidity",
+      "threshold": 85,
+      "target": 1,
+      "points": 100,
+      "hint": "Look for areas with visible rain or high moisture in the air."
+    },
+    {
+      "id": 2,
+      "name": "Cold Explorer",
+      "description": "Find a cold location where temperature drops below 15°C.",
+      "type": "sensor",
+      "trigger": "temperature",
+      "threshold": 15,
+      "target": 1,
+      "points": 100,
+      "hint": "Try air-conditioned rooms or shaded outdoor areas."
+    },
+    {
+      "id": 3,
+      "name": "Shadow Hunter",
+      "description": "Find a dark or covered area. The badge detects this through temperature and humidity changes.",
+      "type": "sensor",
+      "trigger": "darkness",
+      "threshold": 1,
+      "target": 1,
+      "points": 100,
+      "hint": "Look for areas with sudden temperature drops and humidity increases."
+    },
+    {
+      "id": 4,
+      "name": "Smoke Detective",
+      "description": "Detect cigarette smoke in the air.",
+      "type": "sensor",
+      "trigger": "cigarette",
+      "threshold": 350,
+      "target": 1,
+      "points": 150,
+      "hint": "Look for designated smoking areas or people smoking cigarettes."
+    },
+    {
+      "id": 9,
+      "name": "Herbal Detective",
+      "description": "Detect unique herbal smoke signatures in the air.",
+      "type": "sensor",
+      "trigger": "herbal",
+      "threshold": 600,
+      "target": 1,
+      "points": 200,
+      "hint": "Follow your nose to find distinctive herbal smoke patterns.",
+      "ml_enabled": true
+    },
+    {
+      "id": 5,
+      "name": "Shake It Off",
+      "description": "Shake your badge vigorously 5 times. The motion sensor will detect this.",
+      "type": "sensor",
+      "trigger": "movement",
+      "threshold": 1.5,
+      "target": 5,
+      "points": 100,
+      "hint": "Hold the badge firmly and shake it up and down or side to side."
+    },
+    {
+      "id": 6,
+      "name": "Tilt Master",
+      "description": "Tilt your badge at different angles 3 times.",
+      "type": "sensor",
+      "trigger": "tilt",
+      "threshold": 30,
+      "target": 3,
+      "points": 100,
+      "hint": "Rotate and tilt the badge in different directions."
+    },
+    {
+      "id": 7,
+      "name": "Badge Network",
+      "description": "Find another badge nearby via LoRa communication.",
+      "type": "proximity",
+      "trigger": "lora",
+      "threshold": 1,
+      "target": 1,
+      "points": 200,
+      "hint": "Look for other WHY2025 badge holders within 100 meters."
+    },
+    {
+      "id": 8,
+      "name": "Environmental Explorer",
+      "description": "Complete 3 different environmental quests.",
+      "type": "combo",
+      "required": [1, 2, 3],
+      "points": 300,
+      "hint": "Complete Rain Dancer, Cold Explorer, and Shadow Hunter quests."
+    }
+  ],
+  "achievements": [
+    {
+      "name": "First Quest",
+      "description": "Complete your first quest",
+      "condition": "quests_completed >= 1",
+      "points": 50
+    },
+    {
+      "name": "Environmental Master",
+      "description": "Complete all environmental quests",
+      "condition": "environmental_quests_completed == 4",
+      "points": 200
+    },
+    {
+      "name": "Social Butterfly",
+      "description": "Find 3 different badges via LoRa",
+      "condition": "proximity_quests_completed >= 3",
+      "points": 300
+    }
+  ]
+}
